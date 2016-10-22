@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title><%= title %></title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Medley of Automated Checking Exercises" name="description" />
+  <meta content="Jeff Nyman" name="author">
+  <link href="/favicon.ico" rel="shortcut icon" />
+  <link href="/stylesheets/vendor/normalize.css" rel="stylesheet" />
+  <link href="/stylesheets/site.css" rel="stylesheet" />
+  <link href="/stylesheets/font.css" rel="stylesheet" />
+  <link href="/stylesheets/login.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="login" name="login" class="login">
+    <p id="open">Login</p>
+    <form action="/" method="post">
+      <p>
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text">
+      </p>
+      <p>
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password">
+      </p>
+      <p>
+        <div style="text-align:center;">
+          <input class="site-button" id="login-button" type="submit" value="Submit"/>
+        </div>
+      </p>
+    </form>
+  </div>
+  <header>
+    <h1 class="site-logo">Veilus <span class="subtitle">Symbiote<br />Testing<br />Application</span></h1>
+  </header>
+
+  <section>
+    <%= styled_flash %>
+    <%= yield %>
+  </section>
+
+  <footer>
+    <p>Veilus - Symbiote Testing Application, by <a href="http://testerstories.com/" id="blog">Jeff Nyman</a>. For use with <a href="https://github.com/jnyman/symbiote" id="app">Symbiote</a> and other automation tools.</p>
+  </footer>
+
+  <script src="/javascripts/vendor/jquery-3.1.1.min.js"></script>
+  <script src="/javascripts/login.js"></script>
+</body>
+</html>

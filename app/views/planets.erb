@@ -1,0 +1,66 @@
+
+<article id="planets">
+  <img src="images/planet.png" id="planet-logo" alt="Planet Image" />
+  <h1>Your Weight On Astronomical Bodies</h1>
+
+  <form id="computeWeight" action="" method="" name="computeWeight">
+    <label class="site-label" for="wt">Enter Your Weight:</label>
+    <input id="wt" name="wt" class="weight-field" type="text">
+    <input id="calculate" class="site-button" type="button" value="Calculate">
+    <!--<button id="calculate" class="site-button">Calculate</button>-->
+    <span id="weight-error" title="validate-error"></span>
+
+    <table class="planets">
+      <tr>
+        <td><label class="site-label">SOL</label></td>
+        <td><label class="site-label">MERCURY</label></td>
+        <td><label class="site-label">VENUS</label></td>
+        <td><label class="site-label">LUNA</label></td>
+        <td><label class="site-label">MARS</label></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.nineplanets.org/sol.html"><img src="images/sun.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/mercury.html"><img src="images/mercury.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/venus.html"><img src="images/venus.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/luna.html"><img src="images/moon.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/mars.html"><img src="images/mars.gif"></a></td>
+      </tr>
+      <tr>
+        <td><input id="outputsun" class="weight-output" type="text"></td>
+        <td><input id="outputmrc" class="weight-output" type="text"></td>
+        <td><input id="outputvn" class="weight-output" type="text"></td>
+        <td><input id="outputluna" class="weight-output" type="text"></td>
+        <td><input id="outputmars" class="weight-output" type="text"></td>
+      </tr>
+    </table>
+
+    <table class="planets">
+      <tr>
+        <td><label class="site-label">JUPITER</label></td>
+        <td><label class="site-label">SATURN</label></td>
+        <td><label class="site-label">URANUS</label></td>
+        <td><label class="site-label">NEPTUNE</label></td>
+        <td><label class="site-label">PLUTO</label></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.nineplanets.org/jupiter.html"><img src="images/jupiter.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/saturn.html"><img src="images/saturn.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/uranus.html"><img src="images/uranus.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/neptune.html"><img src="images/neptune.gif"></a></td>
+        <td><a href="http://www.nineplanets.org/pluto.html"><img src="images/pluto.gif"></a></td>
+      </tr>
+      <tr>
+        <td><input id="outputjp" class="weight-output" type="text"></td>
+        <td><input id="outputsat" class="weight-output" type="text"></td>
+        <td><input id="outputur" class="weight-output" type="text"></td>
+        <td><input id="outputnpt" class="weight-output" type="text"></td>
+        <td><input id="outputplt" class="weight-output" type="text"></td>
+      </tr>
+    </table>
+  </form>
+
+  <div id="test-guide">
+    <p><strong>Automation Notes:</strong></p>
+    <p>This is a very simple form with a very basic calculation. What you can do, however, is practice the retrieval of data sets.</p>
+  </div>
+</article>

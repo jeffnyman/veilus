@@ -1,0 +1,52 @@
+.computeWeight input {
+    border: 1px solid #999;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 1em;
+}
+
+.weight-field {
+    width: 60px;
+}
+
+.weight-output {
+    width: 100px;
+}
+
+.planets {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.planets td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#computeWeight #calculate {
+    margin-left: 10px;
+}
+
+#computeWeight #weight {
+    margin-left: 10px;
+}
+
+#computeWeight label.val-error {
+    width: 600px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    background: #990000;
+    color: white;
+    border: 1px solid #ccc;
+}
+
+#planet-logo {
+    position: absolute;
+    /*right: 0;
+    top: 0;*/
+    left: 650px;
+    top: 60px;
+}

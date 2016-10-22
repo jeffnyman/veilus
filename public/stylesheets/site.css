@@ -1,0 +1,267 @@
+html, body {
+    line-height: 1;
+    background-color: #334873;
+    background-image: url(../images/lucid-bg.png);
+}
+
+header {
+    border-top: solid 6px white;
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+footer {
+    left: 100px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    padding-top: 18px;
+    background: url(../images/lucid-ft.png) repeat-x left top;
+}
+
+footer p {
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+    font-size: 14px;
+    padding: .5em .25em .5em 1em;
+    margin: 0;
+    color: rgb(55, 76, 119);
+    background: rgb(110, 138, 195);
+    -moz-border-radius: 2px 0 0 0;
+    border-radius: 2px 0 0 0;
+}
+
+section {
+    max-width: 960px;
+    margin: 20px 0 0 100px;
+}
+
+article {
+    padding-bottom: 3em;
+    border-bottom: solid 1px rgba(255,255,255,.5);
+}
+
+h1, h2, h3 {
+    font-family: 'ColaborateRegular', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+    border-bottom: solid 1px rgba(255,255,255,.5);
+    margin-bottom: 0.75em;
+}
+
+h2 {
+    color: rgb(143,180,255);
+    margin-bottom: 5px;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+}
+
+h3 {
+    font-size: 18px;
+    color: rgb(227,198,133);
+}
+
+p, form, li {
+    font-size: 18px;
+    color: white;
+    line-height: 125%;
+    margin-bottom: 10px;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+}
+
+a {
+    color: rgba(255,255,255,.75);
+}
+
+a#veilus-link {
+    color: #c39733;
+    text-decoration: none;
+}
+
+em {
+    font-family: 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+strong {
+    font-family: 'ColaborateMediumRegular', Arial, sans-serif;
+}
+
+pre {
+    padding-left: 1em;
+    color: rgba(255,255,255,.75);
+    font-family: 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+input, select, textarea {
+    color: black;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px solid white;
+    margin: 25px 0;
+}
+
+legend {
+    width: inherit;
+    padding: 0 10px;
+    border-bottom: none;
+    font-size: 18px;
+    color: white;
+    line-height: 125%;
+    margin-bottom: 0;
+    font-family: 'ColaborateLightRegular', Arial, sans-serif;
+}
+
+/* Start: Site Areas */
+
+.site-label {
+    color: rgb(227,198,133);
+    text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+}
+
+.site-item {
+    color: rgb(227,198,133);
+    text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+    text-decoration: underline;
+}
+
+/* Finish: Site Areas */
+
+/* Start: Flash Messages */
+
+.notice, .success {
+    width: 600px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    background: #006600;
+    color: white;
+    border: 1px solid #ccc;
+}
+
+.error, .invalid_code {
+    width: 600px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    background: #990000;
+    color: white;
+    border: 1px solid #ccc;
+}
+
+/* Finish: Flash Messages */
+
+/* Start: Site Areas */
+
+#site-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#test-guide {
+    max-width: 330px;
+    padding-right: 10px;
+    position: absolute;
+    padding-bottom: 50px;
+    right: 0;
+    bottom: 0;
+}
+
+/* Finish: Site Areas */
+
+/* Start: Header Logo */
+
+.site-logo {
+    letter-spacing: -1px;
+    color: #c39733;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+    font: normal 54px 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+.site-logo span {
+    font-size: 24px;
+    color: #776847;
+    top: -0.18em;
+    display: inline-block;
+    text-shadow: none;
+    position: relative;
+    font-family: 'ColaborateRegular', Arial, sans-serif;
+}
+
+.site-logo span.subtitle {
+    font-style: italic;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    top: 0.1em;
+    left: 0.5em;
+    line-height: 90%;
+    text-align: right;
+    background-color: #6e8ac3;
+    padding: .25em .5em .25em 1em;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Finish: Header Logo */
+
+/* Start: Site Buttons */
+
+.site-button {
+    -moz-box-shadow: inset 0 1px 0 0 #bbdaf7;
+    -webkit-box-shadow: inset 0 1px 0 0 #bbdaf7;
+    box-shadow: inset 0 1px 0 0 #bbdaf7;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+    /*background: -moz-linear-gradient(center top, #79bbff 5%, #378de5 100%);*/
+    background: -moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color: #79bbff;
+    -webkit-border-top-left-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-left-radius: 15px;
+    text-indent: 0;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    height: 28px;
+    line-height: 28px;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #528ecc;
+}
+
+.site-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+    /*background: -moz-linear-gradient(center top, #378de5 5%, #79bbff 100%);*/
+    background: -moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+    background-color: #378de5;
+}
+
+.site-button:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Finish: Site Buttons */

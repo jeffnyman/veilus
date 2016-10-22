@@ -1,0 +1,117 @@
+
+<article id="warp">
+  <img src="images/warp-factors.png" id="warp-logo" alt="No Speed of Light Limits" />
+  <h1>Warp Factor Calculator</h1>
+
+  <table class="warpTable">
+    <tr>
+      <td rowspan="2">Warp Factor (W)</td>
+      <td rowspan="2">Velocity (c)</td>
+      <td colspan="5" width="812">Time to Travel</td>
+    </tr>
+    <tr>
+      <td>1 AU</td>
+      <td>1 LY</td>
+      <td>1 Sector<br />(20 LY)</td>
+      <td>Across Galaxy<br />(100,000 LY)</td>
+      <td><input type="text" id="distInput" value="1000"> LY</td>
+    </tr>
+    <tr>
+      <td><input type="text" id="warpInput" value="&lt;type here&gt;" /></td>
+      <td><input type="text" id="velocityInput" value="&lt;type here&gt;" /></td>
+      <td id="travelAU" width="93"></td>
+      <td id="travelLY" width="93"></td>
+      <td id="travelSector" width="93"></td>
+      <td id="travelGalaxy" width="93"></td>
+      <td id="travelUser" width="93"></td>
+    </tr>
+  </table>
+
+  <h2>Warp Factor Table</h2>
+
+  <table id="warpFactor" class="warpFactor tablesorter">
+    <thead>
+    <tr>
+      <th>Warp Factor</th>
+      <th>Calculated speed<br />(<i>c</i>)</th>
+      <th>Distance traveled in 24 hours<br />(<i>light years</i>)</th>
+      <th>Travel Time<br />Earth to Alpha Centauri</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>0.5</td>
+      <td>0.099</td>
+      <td>0.0003</td>
+      <td>43.64 years</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0.003</td>
+      <td>4.33 years</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>10.079</td>
+      <td>0.028</td>
+      <td>156.91 days</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>38.941</td>
+      <td>0.107</td>
+      <td>40.61 days</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>101.594</td>
+      <td>0.278</td>
+      <td>15.57 days</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>213.747</td>
+      <td>0.585</td>
+      <td>7.4 days</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>392.498</td>
+      <td>1.075</td>
+      <td>4.03 days</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>656.135</td>
+      <td>1.796</td>
+      <td>2.41 days</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1024</td>
+      <td>2.804</td>
+      <td>37.07 hours</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1516.381</td>
+      <td>4.152</td>
+      <td>25.03 hours</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><big>&#8734;</big></td>
+      <td><big>&#8734;</big></td>
+      <td>0</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div id="test-guide">
+    <p>Automation Notes:</p>
+    <p>The warp speed calculator has mouse enter events as well as table cells that are purely text and that get updated as a result of actions taken on the table form. The table updates dynamically based on input.</p>
+
+    <p>The warp factor table is sortable via the header column.</p>
+  </div>
+</article>

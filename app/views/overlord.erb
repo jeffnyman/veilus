@@ -1,0 +1,52 @@
+
+<article id="overlord">
+  <img src="images/mad-scientist.png" id="site-image" id="overlord-logo" alt="Mad Scientist for Project Overlord">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="intro-panel panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Project Overlord -- Business is Booming!</h3>
+            <h4>Don't go <strong><ins>fission</ins></strong> for more! Avoid the con<strong><ins>fusion</ins></strong> of choice! (See what we did there?)</h4>
+          </div>
+          <div class="panel-body">
+            Let's provision your bomb. Your bomb will come with some default
+            settings, that should be fine for your destruction needs. However,
+            you can customize a few aspects of your bomb. Fill in the details
+            below or simply leave them blank to accept our defaults.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="settings-panel panel panel-info">
+          <div class="panel-body">
+            <div class="col-sm-5">
+              <span id="provision-error" title="provision-error"></span>
+              <form action="/overlord" id="provision_bomb" class="overlord" method="post">
+                <label for="activation-code">Activation Code</label><br />
+                <span><em>Default: 1234</em></span><br />
+                <input class="form-control" id="activation-code" name="activation_code" type="text" /><br />
+
+                <label for="deactivation-code">Deactivation Code</label><br />
+                <span><em>Default: 0000</em></span><br />
+                <input class="form-control" id="deactivation-code" name="deactivation_code" type="text" /><br />
+
+                <label for="countdown-value">Countdown Duration (in seconds)</label><br />
+                <span><em>Default: 30</em></span><br />
+                <input class="form-control" id="countdown-value" name="countdown_value" type="text" />
+
+                <br /><br />
+
+                <input class="btn btn-lg btn-block btn-danger" id="provision-bomb" value="Provision" type="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

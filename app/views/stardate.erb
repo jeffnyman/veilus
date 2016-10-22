@@ -1,0 +1,92 @@
+
+<article id="stardate">
+  <div class="container-fluid">
+    <img src="images/stardate.png" id="stardate-logo" alt="Stardate" />
+
+    <form id="computeStardate" name="computeStardate" class="standard" method="" action="">
+      <fieldset>
+        <legend>Stardate Calculator</legend>
+
+        <div id="stardateForm">
+          <span id="stardate-instruct">Choose a stardate era.</span>
+          <br />
+          <input id="stardateValue" name="stardateValue" type="text">
+          <input id="convert" type="submit" class="site-button" value="Convert">
+          <span id="stardate-error" title="validate-error"></span>
+          <br /><br />
+          <input id="calendarValue" name="calendarValue" type="text" readonly="readonly" class="stardateFormat">
+          <br />
+          <input type="checkbox" name="stardatesWithLeapYear" id="stardatesWithLeapYear" value="stardatesWithLeapYear" />
+          <label for="stardatesWithLeapYear" id="leapYearLabel" class="site-label">Use Leap Year Calculation?</label>
+          <br />
+          <input type="radio" id="tngEra" name="selectEra" value="tng" disabled="disabled" title="Use TNG Stardates">
+          <label for="tng" id="tngEraLabel" class="site-label">TNG Era</label>
+          <br />
+          <input type="radio" id="tosEra" name="selectEra" value="tos" disabled="disabled" title="Use TOS Stardates">
+          <label for="tos" id="tosEraLabel" class="site-label">TOS Era</label>
+        </div>
+      </fieldset>
+    </form>
+
+    <p>
+      <input type="checkbox" name="enableForm" id="enableForm" value="enableForm" />
+      <label for="enableForm" class="site-label">Enable Form</label>
+    </p>
+
+    <hr />
+
+    <h2>Calculator Basis</h2>
+
+    <p>The basis of this calculator are the following facts:</p>
+
+    <ul id="fact-list" name="fact-list">
+      <li><span class="site-item">Fact:</span> The <em>Next Generation</em> episode <a href="http://en.wikipedia.org/wiki/The_Neutral_Zone_(Star_Trek:_The_Next_Generation)">"The Neutral Zone"</a>, with a stardate of 41986.0, gave the calendar year as 2364 at the end of the first season.</li>
+      <li><span class="site-item">Fact:</span> In the <em>Voyager</em> episode <a href="http://en.wikipedia.org/wiki/Eye_of_the_Needle_(Star_Trek:_Voyager)" name="episode">"Eye of the Needle"</a> Commander Chakotay states that the current year is 2371, with a stardate of 48579.4.</li>
+      <li><span class="site-item">Fact:</span> The date for the <em>Voyager</em> episode <a href="http://en.wikipedia.org/wiki/11:59_(Star_Trek:_Voyager)" name="episode">"11:59"</a> was given as 22 April 2375. (No stardate was given in the episode, but episodes airing before and after it had stardates of 52647 and 52861.274.)</li>
+      <li><span class="site-item">Fact:</span> The movie <a href="http://en.wikipedia.org/wiki/Star_Trek:_First_Contact" name="movie"><em>Star Trek: First Contact</em></a> showed that humans made first contact with Vulcans on 5 April 2063.</li>
+      <li><span class="site-item">Fact:</span> In the <em>Voyager</em> episode <a href="http://en.wikipedia.org/wiki/Homestead_(Star_Trek:_Voyager)" name="episode">"Homestead"</a> the crew is celebrating the 315th anniversary of First Contact Day. The following day, a captain's log is recorded on stardate 54868.6.</li>
+      <li><span class="site-item">Fact:</span> In the <em>Voyager</em> episode <a href="http://en.wikipedia.org/wiki/Q2_(Star_Trek:_Voyager)" name="episode">"Q2"</a>, Icheb states that Kirk completed his historic five-year mission in 2270. Therefore, all episodes of The Original Series must have taken place after 1 January 2265 (assuming it was exactly five years), and before 1 January 2271.</li>
+      <li><span class="site-item">Fact:</span> In the <em>Next Generation</em> episode <a href="http://en.wikipedia.org/wiki/Sarek_(Star_Trek:_The_Next_Generation)" name="episode">"Sarek"</a>, Captain Picard states that Ambassador Sarek is 202 years old. The episode takes place on stardate 43917.4.</li>
+      <li><span class="site-item">Fact:</span> In the <em>Original Series</em> episode <a href="http://en.wikipedia.org/wiki/Journey_to_Babel" name="episode">"Journey to Babel"</a>, Ambassador Sarek states that he is precisely 102.437 Earth years old on stardate 3842.4.</li>
+      <li><span class="site-item">Fact:</span> The difference in time between stardate 43917.4 ("Sarek") and 3842.4 ("Journey to Babel") is approximately 100 years.</li>
+    </ul>
+
+    <hr />
+
+    <h2>Add Data Points for the Stardate Calculator</h2>
+
+    <form id="stardateList" name="stardate-list" method="post" action="stardate">
+      <table id="stardate-list-table">
+        <tr>
+          <td>
+            <select id="stardates" name="stardates" multiple>
+              <option>1312.4 -- TOS: "Where No Man Has Gone Before"</option>
+              <option>41986.0 -- TNG: "The Neutral Zone"</option>
+              <option>48467.3 -- DS9: "Defiant"</option>
+              <option>56947.0 -- VOY: "Before and After"</option>
+              <option>9715.5 -- Star Trek Generations</option>
+              <option>56844.9 -- Star Trek Nemesis</option>
+            </select>
+          </td>
+          <td>
+            Option
+            <input name="list-item" id="listItem" type="text" value="">
+            <input name="add" id="addListItem" type="button" value="Add">
+            <input name="clear" id="clearListItem" type="button" value="X">
+            <br><br>
+            <input class="button-size" name="delete" id="deleteListItem" type="button" value="Delete Item">
+            <br><br>
+            <input class="button-size" name="moveUp" id="moveListItemUp" type="button" value="Move Item Up">
+            <br><br>
+            <input class="button-size" name="moveDown" id="moveListItemDown" type="button" value="Move Item Down">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <div id="test-guide">
+    <p><strong>Automation Notes:</strong></p>
+    <p>This is a good page to test for form elements and validation. There are also elements here that are initially hidden but are still present via the DOM.</p>
+  </div>
+</article>

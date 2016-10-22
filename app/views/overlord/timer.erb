@@ -1,0 +1,11 @@
+<div class="component" id="timer">
+  <div class="row">
+    <div class="timer-display">
+      <fieldset disabled>
+        <input class="text-center col-sm-8 col-sm-offset-2 input-lg" id="timer-output" type="text">
+      </fieldset>
+    </div>
+  </div>
+  <input id="timer-countdown" name="timer-countdown" value="<%= timer.time_remaining %>" type="hidden" />
+  <input id="timer-started" name="timer-started" value="<%= timer.started? %>" type="hidden" />
+</div>

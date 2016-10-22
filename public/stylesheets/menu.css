@@ -1,0 +1,72 @@
+/* Start: Navigation Pullout */
+
+#areas {
+    background-color: rgba(255,255,255,0.95);
+    padding: 0 1em 1em .75em;
+    position: absolute;
+    top: 10em;
+    left: -51em;
+    width: 50em;
+    -moz-border-radius: 0 0 .5em 0;
+    border-radius: 0 0 .5em 0;
+}
+
+#areas h2 {
+    text-transform: uppercase;
+    color: rgb(195,151,51);
+    text-shadow: 2px 2px 1px rgba(0,0,0,.25);
+    border-bottom: solid 1px rgba(255,255,255,.5);
+    font: normal 18px 'ColaborateRegular', Arial, sans-serif;
+    margin-top: 1em;
+    /*text-shadow: none;*/
+}
+
+#areas ul {
+    margin: 5px 0 0 0;
+}
+
+#areas .open {
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: -20px;
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(119,104,71);
+    -moz-border-radius: 0.5em;
+    border-radius: .5em 0;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+#areas .nav {
+    margin: 10px 0 0 50px;
+}
+
+#areas .nav li {
+    display: inline-block;
+}
+
+#areas .nav a {
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgba(107,124,159,.75);
+    color: rgb(255,255,255);
+    padding: .25em .5em;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.25em;
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+#areas .nav a:hover {
+    background-color: rgba(255,255,255,.85);
+    color: rgb(0,0,0);
+}
+
+/* Finish: Navigation Pullout */

@@ -1,0 +1,24 @@
+<% if @bomb.detonated? %>
+  <%= erb :'overlord/detonate' %>
+<% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="bomb-panel panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Business is Booming!</h3>
+            <h4>Don't go <strong><ins>fission</ins></strong> for more! Avoid the con<strong><ins>fusion</ins></strong> of choice! (See what we did there?)</h4>
+          </div>
+          <div class="panel-body">
+            <h2><strong>Preferential Eigenstate-Selecting Temporally-Dispersive Internet Bomb</strong></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="components">
+      <div class="col-sm-4"><%= erb :'overlord/trigger' %></div>
+      <div class="col-sm-4"><%= erb :'overlord/timer' %></div>
+      <div class="col-sm-4"><%= erb :'overlord/device' %></div>
+    </div>
+  </div>
+<% end %>

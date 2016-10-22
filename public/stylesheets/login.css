@@ -1,0 +1,56 @@
+/* Start: Login Form */
+
+#login {
+    position: absolute;
+    left: 560px;
+    top: 6px;
+    width: 300px;
+    z-index: 100;
+}
+
+#login form {
+    display: none;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+}
+
+#login label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin: 0 15px 0 0;
+    color: #3a507b;
+}
+
+#login input {
+    font-size: 14px;
+}
+
+#login a {
+    color: black;
+}
+
+#login button {
+    margin-left: 50px;
+}
+
+#login .close {
+    background-image: url(../images/form_close.png);
+    background-color: #6e8ac3;
+    background-color: rgb(110,138,195);
+}
+
+#open {
+    margin: 0;
+    cursor: pointer;
+    color: #3a507b;
+    padding: 5px 0 2px 30px;
+    background: white url(../images/form_open.png) no-repeat 8px 7px;
+}
+
+#open:hover {
+    color: black;
+    background-color: #6e8ac3;
+}
+
+/* Finish: Login Form */
