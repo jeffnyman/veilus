@@ -17,21 +17,9 @@
     box-shadow: 10px 10px 5px #888888;
     border: 1px solid #000000;
 
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-    -moz-border-radius-topright: 0;
-    -webkit-border-top-right-radius: 0;
-    border-top-right-radius: 0;
-
-    -moz-border-radius-topleft: 0;
-    -webkit-border-top-left-radius: 0;
-    border-top-left-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
 
 .warpTable td {
@@ -40,16 +28,12 @@
     vertical-align: middle;
 
     background: -o-linear-gradient(bottom, #56beff 5%, #ffffff 100%);
-    /*background: -o-linear-gradient(top, #56beff, #ffffff);*/
     background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #56beff), color-stop(1, #ffffff) );
     background: -moz-linear-gradient( top, #56beff 5%, #ffffff 100% );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#56beff", endColorstr="#ffffff");
 
     background-color: #56beff;
     border: 1px solid #000000;
-    border-width: 0 1px 1px 0;
-
-    /*padding: 7px;*/
 
     font-family: Arial, sans-serif;
     font-weight: normal;
@@ -66,21 +50,9 @@
     width: 100%;
     border: 0 solid #000000;
 
-    -moz-border-radius-bottomleft: 25px;
-    -webkit-border-bottom-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    -moz-border-radius-bottomright: 25px;
-    -webkit-border-bottom-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    -moz-border-radius-topright: 25px;
-    -webkit-border-top-right-radius: 25px;
-    border-top-right-radius: 25px;
-
-    -moz-border-radius-topleft: 25px;
-    -webkit-border-top-left-radius: 25px;
-    border-top-left-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
 }
 
 .warpFactor table {
@@ -126,7 +98,6 @@
 .warpFactor td {
     vertical-align: middle;
     border: 1px solid #000000;
-    border-width: 0 1px 1px 0;
     text-align: left;
     padding: 8px;
     font-size: 12px;
@@ -138,14 +109,11 @@
 /*.warpFactor th:first-child td {*/
 .warpFactor thead:first-child th {
     background: -o-linear-gradient(bottom, #0000bf 5%, #5656ff 100%);
-    /*background: -o-linear-gradient(top, #0000bf, #5656ff);*/
     background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0000bf), color-stop(1, #5656ff) );
     background: -moz-linear-gradient( top, #0000bf 5%, #5656ff 100% );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0000bf", endColorstr="#5656ff");
-
     background-color: #0000bf;
     border: 0 solid #000000;
-    border-width: 0 0 1px 1px;
     text-align: center;
     font-size: 14px;
     font-family: Arial, sans-serif;

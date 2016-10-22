@@ -34,10 +34,9 @@
     margin-left: 50px;
 }
 
-#login .close {
+#login .closed {
     background-image: url(../images/form_close.png);
     background-color: #6e8ac3;
-    background-color: rgb(110,138,195);
 }
 
 #open {

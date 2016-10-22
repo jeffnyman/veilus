@@ -11,21 +11,21 @@
     box-shadow: 10px 10px 5px #888888;
     border:1px solid #000000;
 
-    -moz-border-radius-bottomleft:0px;
-    -webkit-border-bottom-left-radius:0px;
-    border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0;
+    -webkit-border-bottom-left-radius:0;
+    border-bottom-left-radius:0;
 
-    -moz-border-radius-bottomright:0px;
-    -webkit-border-bottom-right-radius:0px;
-    border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0;
+    -webkit-border-bottom-right-radius:0;
+    border-bottom-right-radius:0;
 
-    -moz-border-radius-topright:0px;
-    -webkit-border-top-right-radius:0px;
-    border-top-right-radius:0px;
+    -moz-border-radius-topright:0;
+    -webkit-border-top-right-radius:0;
+    border-top-right-radius:0;
 
-    -moz-border-radius-topleft:0px;
-    -webkit-border-top-left-radius:0px;
-    border-top-left-radius:0px;
+    -moz-border-radius-topleft:0;
+    -webkit-border-top-left-radius:0;
+    border-top-left-radius:0;
 }
 
 .wowClassTable table{
@@ -38,27 +38,27 @@
 }
 
 .wowClassTable tr:last-child td:last-child {
-    -moz-border-radius-bottomright:0px;
-    -webkit-border-bottom-right-radius:0px;
-    border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0;
+    -webkit-border-bottom-right-radius:0;
+    border-bottom-right-radius:0;
 }
 
 .wowClassTable table tr:first-child td:first-child {
-    -moz-border-radius-topleft:0px;
-    -webkit-border-top-left-radius:0px;
-    border-top-left-radius:0px;
+    -moz-border-radius-topleft:0;
+    -webkit-border-top-left-radius:0;
+    border-top-left-radius:0;
 }
 
 .wowClassTable table tr:first-child td:last-child {
-    -moz-border-radius-topright:0px;
-    -webkit-border-top-right-radius:0px;
-    border-top-right-radius:0px;
+    -moz-border-radius-topright:0;
+    -webkit-border-top-right-radius:0;
+    border-top-right-radius:0;
 }
 
 .wowClassTable tr:last-child td:first-child {
-    -moz-border-radius-bottomleft:0px;
-    -webkit-border-bottom-left-radius:0px;
-    border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0;
+    -webkit-border-bottom-left-radius:0;
+    border-bottom-left-radius:0;
 }
 
 .wowClassTable tr:hover td {}
@@ -69,7 +69,6 @@
 .wowClassTable td {
     vertical-align:middle;
     border:1px solid #000000;
-    border-width:0px 1px 1px 0px;
     text-align:left;
     padding:7px;
     font-size:10px;
@@ -78,9 +77,9 @@
     color:#000000;
 }
 
-.wowClassTable tr:last-child td { border-width:0px 1px 0px 0px; }
-.wowClassTable tr td:last-child { border-width:0px 0px 1px 0px; }
-.wowClassTable tr:last-child td:last-child { border-width:0px 0px 1px 0px; }
+.wowClassTable tr:last-child td { border-width:0 1px 0 0; }
+.wowClassTable tr td:last-child { border-width:0 0 1px 0; }
+.wowClassTable tr:last-child td:last-child { border-width:0 0 1px 0; }
 
 .wowClassTable tr:first-child th {
     background:-o-linear-gradient(bottom, #b2b2b2 5%, #333333 100%);
@@ -91,7 +90,6 @@
     background-color:#b2b2b2;
     border:0px solid #000000;
     text-align:center;
-    border-width:0px 0px 1px 1px;
     font-size:14px;
     font-family: Arial, sans-serif;
     font-weight:bold;

@@ -14,12 +14,12 @@ $(document).ready(function() {
     // Handle the login form
     $('#open').clickToggle(
         function () {
-            $('#login form').slideDown(300);
-            $(this).addClass('close');
+            $('#login').find('form').slideDown(300);
+            $(this).addClass('closed');
         },
 
         function () {
-            $('#login form').fadeOut(600);
-            $(this).removeClass('close');
+            $('#login').find('form').fadeOut(600);
+            $(this).removeClass('closed');
         });
 });
