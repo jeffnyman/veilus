@@ -1,0 +1,44 @@
+
+<article id="comic-library">
+  <p><img id="comic-logo" src="/images/comics.png" alt="Comics Library" /></p>
+
+  <p><a href="/comics/new">Add a Comic</a></p>
+
+  <% if @comics.any? %>
+      <div id="container">
+        <table id="comic-list" class="site-table">
+          <thead>
+            <tr>
+              <th id="comicSeries">Series</th>
+              <th id="comicVolume">Volume</th>
+              <th id="comicName">Name</th>
+              <th id="comicIssue">Issue</th>
+              <th id="comicPublisher">Publisher</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @comics.each do |comic| %>
+            <tr>
+              <td headers="comicSeries"><%= comic.series %></td>
+              <td headers="comicVolume"><%= comic.volume %></td>
+              <td headers="comicName"><a href="/comics/<%= comic.id %>"><%= comic.name %></a></td>
+              <td headers="comicIssue"><%= comic.issue %></td>
+              <td headers="comicPublisher"><%= comic.publisher %></td>
+            </tr>
+          <% end %>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Series</th>
+              <th>Volume</th>
+              <th>Name</th>
+              <th>Issue</th>
+              <th>Publisher</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+  <% else %>
+      <p>The library contains no comics.</p>
+  <% end %>
+</article>

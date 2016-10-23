@@ -1,0 +1,28 @@
+
+<article id="comic-show">
+  <h1><%= @comic.series %>, v<%= @comic.volume %></h1>
+  <h2><%= @comic.name %></h2>
+  <h3><%= @comic.story_arc if @comic.story_arc %></h3>
+
+  <p>Issue: <%= "%03d" % @comic.issue %></p>
+  <p>Publisher: <%= @comic.publisher %></p>
+
+  <p><%= @comic.cover_date.strftime("Cover Date: %e %B %Y") if @comic.cover_date %></p>
+
+  <h3>Description:</h3>
+
+  <% if @comic.description %>
+  <p><%= @comic.description %></p>
+  <% else %>
+  <p><em>No description provided.</em></p>
+  <% end %>
+
+  <p><a href="/comics">Back to Comic List</a></p>
+
+  <p><a href="/comics/<%= @comic.id %>/edit"><input id="edit-comic" class="site-button" type="button" value="Edit Comic"></a></p>
+
+  <form action="/comics/<%= @comic.id %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" class="site-button" value="Delete Comic" />
+  </form>
+</article>

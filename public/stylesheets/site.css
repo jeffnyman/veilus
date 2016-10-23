@@ -77,6 +77,15 @@ a {
     color: rgba(255,255,255,.75);
 }
 
+a:visited {
+    color: rgba(255,255,255,.75);
+}
+
+a:hover {
+    color: #007fff;
+    text-decoration: dotted;
+}
+
 a#veilus-link {
     color: #c39733;
     text-decoration: none;

@@ -6,11 +6,36 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     backports (3.6.8)
     concurrent-ruby (1.0.2)
+    data_objects (0.10.17)
+      addressable (~> 2.1)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-postgres-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_postgres (~> 0.10.6)
+    dm-sqlite-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_sqlite3 (~> 0.10.6)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    do_postgres (0.10.17)
+      data_objects (= 0.10.17)
+    do_sqlite3 (0.10.17)
+      data_objects (= 0.10.17)
     i18n (0.7.0)
     minitest (5.9.1)
     multi_json (1.12.1)
+    pg (0.19.0)
     puma (3.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -42,6 +67,13 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  dm-core
+  dm-migrations
+  dm-postgres-adapter
+  dm-sqlite-adapter
+  dm-timestamps
+  dm-validations
+  pg
   puma
   sinatra
   sinatra-flash

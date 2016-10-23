@@ -1,0 +1,11 @@
+
+<article id="comic-edit">
+  <p><a href="/comics">Back to Comic List</a></p>
+
+  <h1>Edit Comic Details</h1>
+
+  <form id="comicForm" method="post" action="/comics/<%= @comic.id %>">
+    <input type="hidden" name="_method" value="PUT" />
+    <%= erb :'comics/comic_form' %>
+  </form>
+</article>

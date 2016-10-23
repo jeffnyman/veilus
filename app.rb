@@ -4,12 +4,19 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sinatra/flash'
 
+require 'dm-core'
+require 'dm-timestamps'
+require 'dm-validations'
+require 'dm-migrations'
+
 require_relative 'app/helpers/app_helper'
+require_relative 'app/helpers/comic_helpers'
 require_relative 'app/helpers/overlord_helpers'
 
 require_relative 'app/models/trigger'
 require_relative 'app/models/timer'
 require_relative 'app/models/bomb'
+require_relative 'app/models/comic'
 
 module Project
   class Veilus < Sinatra::Base
@@ -17,15 +24,38 @@ module Project
     register Sinatra::Flash
 
     helpers AppHelpers
+    helpers ComicHelpers
     helpers OverlordHelpers
 
     configure do
       enable :sessions
+      enable :logging
+      enable :dump_errors
+      enable :method_override
+
       set :server, :puma
       set :name, "Veilus"
       set :views, "app/views"
       set :username, "admin"
       set :password, "admin"
+      set :start_time, Time.now
+      set :session_secret, "spatially foliated hypersurface with temporal coordinates"
+    end
+
+    before do
+      last_modified settings.start_time
+      etag settings.start_time.to_s
+      cache_control :public, :must_revalidate
+    end
+
+    configure :development do
+      DataMapper::Logger.new($stdout, :debug)
+      DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/app/databases/comic.db")
+      DataMapper.finalize.auto_upgrade!
+    end
+
+    configure :production do
+      DataMapper.setup(:default, ENV['DATABASE_URL'])
     end
 
     get '/' do
@@ -132,6 +162,73 @@ module Project
     end
 
     # Finish: Overlord
+
+    # Start: Comics
+
+    get '/comics/?' do
+      protected!
+      title 'Comic Library'
+      get_comics
+      erb :comics
+    end
+
+    get '/comics/new' do
+      protected!
+      title 'Add a Comic'
+      @comic = Comic.new
+      erb :'comics/comic_new'
+    end
+
+    post '/comics' do
+      if create_comic
+        flash[:notice] = "Comic successfully added."
+        redirect to("/comics/#{@comic.id}")
+      else
+        error = @comic.errors.values.map { |e| e.to_s }
+        flash[:error] = "Unable to add the comic. (#{error})"
+        redirect('/comics/new')
+      end
+    end
+
+    get '/comics/:id' do
+      protected!
+      @comic = find_comic
+      erb :'comics/comic_show'
+    end
+
+    get '/comics/:id/edit' do
+      protected!
+      @comic = find_comic
+      erb :'comics/comic_edit'
+    end
+
+    put '/comics/:id' do
+      comic = find_comic
+      # Note: This could be changed to comic.update(params[:comic])
+      # if the jQuery validation is changed to look for id.
+      params.reject! {|k,v| %w"_method splat captures".include? k}
+      if comic.update(params)
+        flash[:notice] = "Comic successfully updated."
+      else
+        error = comic.errors.values.map { |e| e.to_s }
+        flash[:error] = "Unable to update the comic. (#{error})"
+      end
+      redirect to("/comics/#{comic.id}")
+    end
+
+    delete '/comics/:id' do
+      comic = find_comic
+      if comic.destroy
+        flash[:notice] = "Comic deleted."
+        redirect to('/comics')
+      else
+        error = comic.errors.values.map { |e| e.to_s }
+        flash[:error] = "Unable to delete the comic. (#{error})"
+        redirect to("/comics/#{comic.id}")
+      end
+    end
+
+    # Finish: Comics
   end
 end
 
