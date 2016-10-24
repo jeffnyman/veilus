@@ -1,0 +1,76 @@
+/* Start: Sign Up Form */
+
+strong#group {
+    color: rgb(227,198,133);
+}
+
+#signup input[type="text"], input[type="date"], input[type="password"] {
+    border: 1px solid #999;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 1em;
+}
+
+form#signup input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+form#signup select {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+#signup textarea#conspiracy {
+    width: 620px;
+    height: 300px;
+}
+
+#signup input#secretTrackingNumber {
+    width: 100px;
+}
+
+form#signup #submit {
+    float: right;
+}
+
+#practice span {
+    color: #ffffff;
+}
+
+#practice form .indent {
+    margin-left: 30px;
+}
+
+.labelBlock {
+    color: rgb(227,198,133);
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 0 !important;
+    clear: both;
+    margin-top: 10px;
+}
+
+#signup label.val-error {
+    margin-top: 2px;
+    font-size: 0.8em;
+    color: rgb(395,151,51);
+    font-weight: bold;
+    display: block;
+//margin-left: 215px;
+    margin-left: 0;
+}
+
+#signup input.val-error, #signup select.val-error {
+    background: #ffa9b8;
+    border: 1px solid red;
+}
+
+#signup .indent label.val-error {
+    margin-left: 0;
+}
+
+/* Finish: Sign Up Form */

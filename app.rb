@@ -38,15 +38,15 @@ module Project
       set :views, "app/views"
       set :username, "admin"
       set :password, "admin"
-      set :start_time, Time.now
+      #set :start_time, Time.now
       set :session_secret, "spatially foliated hypersurface with temporal coordinates"
     end
 
-    before do
-      last_modified settings.start_time
-      etag settings.start_time.to_s
-      cache_control :public, :must_revalidate
-    end
+    #before do
+    #  last_modified settings.start_time
+    #  etag settings.start_time.to_s
+    #  cache_control :public, :must_revalidate
+    #end
 
     configure :development do
       DataMapper::Logger.new($stdout, :debug)
@@ -112,6 +112,11 @@ module Project
       protected!
       title 'World of Warcraft'
       erb :warcraft
+    end
+
+    get '/practice/?' do
+      title 'Practice Page'
+      erb :practice
     end
 
     # Start: Overlord

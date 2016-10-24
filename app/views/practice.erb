@@ -1,0 +1,115 @@
+
+<article id="practice">
+  <img src="images/practice.png" id="site-image" alt="Practice Image" />
+
+  <h1>Practice Page</h1>
+
+  <p>This page contains links to areas that are meant to offer specific bits of functionality. The page also contains some minimal functionality of its own.</p>
+
+  <form action="#" method="post" name="signup" id="signup">
+    <fieldset>
+      <legend>Sign Up Form For <strong id="group">Apocalypticists Unite</strong></legend>
+
+      <label for="name" class="site-label">Name</label>
+      <input name="name" type="text" class="required" id="name" title="Please type your name." />
+
+      <label for="email" class="site-label">E-mail Address</label>
+      <input name="email" type="text" id="email" />
+
+      <label for="dob" class="site-label">Date of Birth</label>
+      <input name="dob" type="date" id="dob" class="date" title="Please type your date of birth using this format: 01/19/2000" />
+
+      <label for="password" class="site-label">Password</label>
+      <input name="password" type="password" id="password" />
+
+      <label for="confirmPassword" class="site-label">Confirm Password</label>
+      <input name="confirmPassword" type="password" id="confirmPassword" />
+
+      <label for="conspiracy" class="site-label">Describe Your Most Active Conspiracy</label>
+      <br />
+      <textarea name="conspiracy" id="conspiracy"></textarea>
+
+      <input id="secretTrackingNumber" type="hidden" value="0-85131-041-9" />
+
+      <div class="labelBlock">What Technology Would You Go To Battle With?</div>
+      <div class="indent">
+        <input type="checkbox" name="tech" id="camoArmor" value="camoArmor" class="required" title="Please check at least one technology." />
+        <label for="camoArmor" class="site-label">Chameleoflage Armor</label><br />
+
+        <input type="checkbox" name="tech" id="neuralShunt" value="neuralShunt" />
+        <label for="neuralShunt" class="site-label">Neural Shunts</label><br />
+
+        <input type="checkbox" name="tech" id="kineticHarpoon" value="kineticHarpoon" />
+        <label for="kineticHarpoon" class="site-label">Kinetic Harpoons</label><br />
+
+        <input type="checkbox" name="tech" id="organicCircuitry" value="organicCircuitry" />
+        <label for="organicCircuitry" class="site-label">Organic Circuitry</label><br />
+
+        <input type="checkbox" name="tech" id="eigenstate" value="eigenstate" disabled="disabled" />
+        <label for="eigenstate" class="site-label">Preferential Eigenstate Selector</label> <span id="eigen">(Initially Disabled)</span><br />
+
+        <input id="toggleAllTech" name="toggleAllTech" title="Enable Disabled Choices" type="checkbox" /> Enable Disabled Choices
+      </div>
+
+      <div class="labelBlock">Select Your Least Favorite Way To Vaporize:</div>
+      <div class="indent">
+        <input type="radio" id="mtc" name="vaporize" value="mtc" class="required" title="Please select one option." />
+        <label for="mtc" class="site-label">Multiphasic Temporal Convergence</label><br />
+
+        <input type="radio" id="ups" name="vaporize" value="ups" />
+        <label for="ups" class="site-label">Unstable Dimensional Phase Shift</label><br />
+
+        <input type="radio" id="wcb" name="vaporize" value="wcb" />
+        <label for="wcb" class="site-label">Warp Core Breach</label><br />
+
+        <input type="radio" id="cme" name="vaporize" value="cme" disabled="disabled" />
+        <label for="cme" class="site-label">Coronal Mass Ejection</label> <span id="coronal">(Initially Disabled)</span><br />
+
+        <input id="toggleAllVapo" name="toggleAllVapo" title="Enabled Disabled Choices" type="checkbox" /> Enable Disabled Choices
+      </div>
+
+      <div class="labelBlock">Select The Sith Power You Most Often Use:</div>
+      <div class="indent">
+        <select id="sith" name="sith" disabled="disabled" title="Choose a Sith Power">
+          <option value="">--Please Select One--</option>
+          <option value="force lightning">Force Lightning</option>
+          <option value="sundering assault">Sundering Assault</option>
+          <option value="vicious slash">Vicious Slash</option>
+          <option value="withering decapitation">Withering Decapitation</option>
+        </select><br />
+        <input id="toggleSith" name="toggleSith" title="Enable Select List" type="checkbox" /> Enable the Sith Power Select List
+      </div>
+
+      <div class="labelBlock">Select The Villain You Most Emulate:</div>
+      <div class="indent">
+        <select id="villain" name="comic-villain-list" title="Choose a Villain">
+          <option value="">--Please Select One--</option>
+          <option value="001">Thanos</option>
+          <option value="002">Darkseid</option>
+          <option value="003">Venom</option>
+          <option value="004">Carnage</option>
+          <option value="005">Doomsday</option>
+          <option value="006">Darth Sidious</option>
+          <option value="007">Megatron</option>
+        </select>
+      </div>
+
+      <div class="labelBlock">Which Gives You The Biggest Headache:</div>
+      <span class="indent">You can select multiple migraine inducers and the list does scroll.</span>
+      <div class="indent">
+        <select id="physics" name="physics" multiple="multiple" class="required" title="Choose Your Headache Topic">
+          <option value="qe">Quantum Entanglement</option>
+          <option value="ta">Tachyonic Antitravel</option>
+          <option value="bec">Bose-Einstein Condensates</option>
+          <option value="awm">Alcubierre Warp Metrics</option>
+          <option value="kt">Krasnikov Tubes</option>
+          <option value="ss">Supersymmetric Particle Theory</option>
+          <option value="lqg">Loop Quantum Gravity</option>
+          <option value="ngs">Noncommutative Geometric Spaces</option>
+        </select>
+      </div>
+
+      <input type="submit" name="submit" id="submit" class="site-button" value="Submit" />
+    </fieldset>
+  </form>
+</article>
