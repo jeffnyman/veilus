@@ -1,4 +1,4 @@
-// Used for toggling fields on the form.
+// Used for toggling fields on the signup form.
 $(document).ready(function() {
     $("#toggleAllTech").click(function() {
         if ($("#toggleAllTech").is(":checked")) {
@@ -69,3 +69,14 @@ $(document).ready(function() {
         }
     }); // end validate
 }); // end ready
+
+// Used for drag and drop
+$(document).ready(function() {
+    $("#draggable").draggable();
+    $("#droppable").droppable({
+        drop: function(event, ui) {
+            $(this).addClass('ui-state-highlight').find('p').html('Dropped!');
+            $('body').off();
+        }
+    });
+});

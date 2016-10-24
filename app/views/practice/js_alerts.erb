@@ -1,0 +1,48 @@
+<h1>JavaScript Alerts</h1>
+
+<p><a href="../practice">Back to Practice Page</a></p>
+
+<p>JavaScript alerts are always interesting. The first set of buttons below have the logic inside the button element. The buttons can also change based on the action.</p>
+
+<div id="javascript_buttons">
+  <label class="site-label">JavaScript Buttons:</label>
+  <input id="alertButton" type="button" value="Alert" onclick="alert('Alert!')" />
+  <input id="confirmButton" type="button" onclick="this.value = confirm('Confirmation Message Received')" value="Confirm" />
+  <input id="promptButton" type="button" onclick='this.value = prompt("Favorite Color", "blue")' value="Prompt" />
+</div>
+
+<hr />
+
+<p>The next buttons are relying on JavaScript on the page but not inlined in the element. The buttons here do not change, but rather the "Result" area is provided some text to display.</p>
+
+<ul style='list-style-type: none;'>
+  <li><input type="button" class="site-button" value="JS Alert" onclick="jsAlert()" /></li>
+  <li><input type="button" class="site-button" value="JS Confirm" onclick="jsConfirm()" /></li>
+  <li><input type="button" class="site-button" value="JS Prompt" onclick="jsPrompt()" /></li>
+</ul>
+
+<span style="color: #ffffff;">Result:</span>
+<p id='result' style='color: #ffff00;'></p>
+
+<script>
+  function jsAlert() {
+    alert('JS Alert');
+    log('You successfuly clicked an alert.');
+  }
+
+  function jsConfirm() {
+    var c = confirm('JS Confirm');
+    var result = c === true ? 'Ok' : 'Cancel';
+    log('You clicked: ' + result);
+  }
+
+  function jsPrompt() {
+    var p = prompt('JS prompt');
+    log('You entered: ' + p);
+  }
+
+  function log(msg) {
+    var result = document.getElementById('result');
+    result.innerHTML = msg;
+  }
+</script>

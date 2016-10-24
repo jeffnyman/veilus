@@ -74,3 +74,44 @@ form#signup #submit {
 }
 
 /* Finish: Sign Up Form */
+
+/* Start: Drag and Drop */
+
+#draggable {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+    background-color: red;
+}
+
+#droppable {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+    background-color: blue;
+}
+
+.columns {
+    width: 400px;
+}
+.column {
+    height: 150px;
+    width: 150px;
+    float: left;
+    border: 2px solid #666666;
+    background-color: #ccc;
+    margin-right: 5px;
+    text-align: center;
+    cursor: move;
+}
+.column.over {
+    border: 2px dashed #000;
+}
+
+/* Finish: Drag and Drop */

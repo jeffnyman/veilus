@@ -114,10 +114,24 @@ module Project
       erb :warcraft
     end
 
+    # Start: Practice
+
     get '/practice/?' do
       title 'Practice Page'
       erb :practice
     end
+
+    get '/practice/drag_and_drop' do
+      title 'Practice - Drag and Drop'
+      erb :'practice/drag_and_drop'
+    end
+
+    get '/practice/js_alerts' do
+      title 'Practice - JavaScript Alerts'
+      erb :'practice/js_alerts'
+    end
+
+    # Finish: Practice
 
     # Start: Overlord
 
