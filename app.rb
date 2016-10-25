@@ -79,7 +79,7 @@ module Project
     end
 
     get '/home/?' do
-      protected!
+      #protected!
       title 'Home'
       erb :home
     end
@@ -91,25 +91,25 @@ module Project
     end
 
     get '/stardate/?' do
-      protected!
+      #protected!
       title 'Stardate Calculator'
       erb :stardate
     end
 
     get '/planets/?' do
-      protected!
+      #protected!
       title 'Planet Weight Calculator'
       erb :planets
     end
 
     get '/warp/?' do
-      protected!
+      #protected!
       title 'Warp Factor Calculator'
       erb :warp
     end
 
     get '/warcraft/?' do
-      protected!
+      #protected!
       title 'World of Warcraft'
       erb :warcraft
     end
@@ -146,7 +146,7 @@ module Project
     # Start: Overlord
 
     get '/overlord/?' do
-      protected!
+      #protected!
       title 'Project Overlord'
       erb :overlord
     end
