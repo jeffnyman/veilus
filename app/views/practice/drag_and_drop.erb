@@ -1,23 +1,23 @@
 <h1>Drag and Drop</h1>
 
-<p><a href="../practice">Back to Practice Page</a></p>
+<p><a class="site-button" href="../practice">Back to Practice Page</a></p>
 
-<p>The first boxes (colored) do not use the built-in draggable attribute. The second boxes (grey) do.</p>
+<p>The first boxes (colored) do not use the built-in draggable attribute. The second boxes (grey) do. The JavaScript for the second set of boxes is located within the page.</p>
 
-<p>The JavaScript for the second set of boxes is inlined within the page.</p>
-
-<div class="labelBlock"></div>
-<div id="draggable" class="ui-widget-content">
-  <p>Drag me to my blue target</p>
+<div class="practice-block">
+  <div id="draggable" class="ui-widget-content">
+    <p>Drag me to my blue target</p>
+  </div>
+  <div id="droppable" class="ui-widget-header">
+    <p>Drop the red box here</p>
+  </div>
 </div>
-<div id="droppable" class="ui-widget-header">
-  <p>Drop the red box here</p>
-</div>
 
-<div class="labelBlock"></div>
-<div id="columns">
-  <div class="column" id="column-a" draggable="true">First</div>
-  <div class="column" id="column-b" draggable="true">Second</div>
+<div class="practice-block">
+  <div id="columns">
+    <div class="column" id="column-a" draggable="true">First</div>
+    <div class="column" id="column-b" draggable="true">Second</div>
+  </div>
 </div>
 
 <script>

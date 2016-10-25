@@ -1,0 +1,75 @@
+<script src="/javascripts/vendor/jquery-3.1.1.min.js"></script>
+
+<h1>Dynamic Controls</h1>
+
+<p><a class="site-button" href="../practice">Back to Practice Page</a></p>
+
+<div class="practice-block">
+  <div id="dynamic_buttons">
+  <label class="site-label">Dynamic Buttons:</label>
+  <input id="target" type="button" value="Target">
+  <input id="hideButton" type="button" value="Hide Button">
+  <input id="unhideButton" type="button" value="Unhide Button">
+  <input id="createButton" type="button" value="Create Button">
+  <input id="removeButton" type="button" value="Remove Button">
+  </div>
+</div>
+
+<div class="practice-block">
+  <label class="site-label">Dynamic Controls</label>
+  <p>This example demonstrates when controls (e.g., checkbox, option button, etc.) are added or removed asynchronously.</p>
+  <form>
+    <button type="button" class="site-button" id="btn" onclick="onClick()">Remove</button>
+    <div id="checkbox">
+      <input type="checkbox" title="Disappearing Checkbox" id="checkbox" /> Checkbox Will Disappear
+    </div>
+  </form>
+</div>
+
+<script>
+  function onClick (){
+    disableButton();
+    clearMessage();
+    showDelay();
+    pauseThenToggleControls();
+  }
+
+  function disableButton() {
+    $('#btn').attr("disabled",true);
+  }
+
+  function clearMessage() {
+    if ($('#message').length) {
+      $('#message').first().remove();
+    }
+  }
+
+  function showDelay() {
+    $('#btn').after("<div id='loading'>Brace yourself ... <img src='/images/ajax-loader.gif'></div></br>");
+  }
+
+  function pauseThenToggleControls() {
+    setTimeout(function() {
+      toggleControls();
+    } , 3000 );
+  }
+
+  function toggleControls() {
+    var btn = $('#btn').first();
+    var check = $('#checkbox').first();
+    var load = $('#loading');
+    if (btn.text() == "Remove") {
+      check.remove();
+      btn.text("Add");
+      btn.after("<p id='message'>Checkbox is Gone!</p>");
+      btn.attr("disabled", false);
+      load.hide();
+    }else{
+      btn.text("Remove");
+      btn.after("<div id='checkbox'><input type='checkbox' id='checkbox'> Checkbox Will Disappear </div>");
+      btn.after("<p id='message'>Checkbox is Back!</p>");
+      btn.attr("disabled", false);
+      load.hide();
+    }
+  };
+</script>

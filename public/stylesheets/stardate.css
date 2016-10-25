@@ -6,6 +6,10 @@
     width: 450px;
 }
 
+#stardate-instruct {
+    color: rgb(227,198,133);
+}
+
 #convert {
     margin-left: 10px;
 }

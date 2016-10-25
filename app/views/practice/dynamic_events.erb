@@ -1,0 +1,74 @@
+<script src="/javascripts/vendor/jquery-3.1.1.min.js"></script>
+
+<h1>Dynamic Events</h1>
+
+<p><a class="site-button" href="../practice">Back to Practice Page</a></p>
+
+<div class="practice-block">
+  <label class="site-label">DOM Additions</label>
+  <p>Each of the buttons below will add text to the DOM tree, with some form of delay.</p>
+  <div>
+    <button id="long">Start modifying subtree with 5 node operations and 1000 ms delay between them</button>
+    <br />
+    <button id="quick">Start modifying subtree with 20 node operations and 100 ms delay between them</button>
+    <br />
+    <button id="stale">Start modifying and then update child div</button>
+    <br />
+    <button id="fade">Start fading in text</button>
+    <br />
+    <div id="container1">
+      <div id="container2"></div>
+    </div>
+    <div id="container3">
+      <span id="spanContainer" style="opacity: 0">Into the Fade</span>
+    </div>
+  </div>
+</div>
+
+<div class="practice-block">
+  <label class="site-label">Dynamic Load of Page Element</label>
+  <p>This section handles an element on the page that is initially hidden.</p>
+
+  <div id='start'>
+    <button>Start</button>
+  </div>
+
+  <div id='finish' style='display:none'>
+    <span id="spanContainer">Hidden Element Revealed</span>
+  </div>
+</div>
+
+<div class="practice-block">
+  <p>This one handles an element that is rendered after the fact.</p>
+
+  <div id='start-render'>
+    <button>Start</button>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    $('#start button').click(function(){
+      $('#start').hide();
+      $('#start').before("<div id='loading'>Loading... <img src='/images/ajax-loader.gif'></div>");
+      setTimeout(function() {
+        $('#loading').hide();
+        $('#finish').show();
+      } , 5000 );
+    });
+  });
+</script>
+
+<script>
+  $(function(){
+    $('#start-render button').click(function(){
+      $('#start-render').hide();
+      $('#start-render').before("<div id='loading'>Loading... <img src='/images/ajax-loader.gif'></div>");
+      setTimeout(function() {
+        $('#loading').hide();
+        $('#loading').before("<div id='finish-render' style='display:none'>Rendered Element Revealed</div>")
+        $('#finish-render').show();
+      } , 5000 );
+    });
+  });
+</script>

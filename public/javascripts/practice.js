@@ -80,3 +80,101 @@ $(document).ready(function() {
         }
     });
 });
+
+// Used for the target button JavaScript events
+$(document).ready(function() {
+    function hide() {
+        document.getElementById("target").style.display="none";
+    }
+
+    function unhide() {
+        document.getElementById("target").style.display="inline";
+    }
+
+    function addDiv() {
+        var button = document.createElement("input");
+        button.setAttribute("type", "button");
+        button.setAttribute("value", "New Button");
+        button.setAttribute("id", "new_button");
+        document.getElementById("dynamic_buttons").appendChild(button)
+    }
+
+    function removeDiv() {
+        var button = document.getElementById("new_button");
+        document.getElementById("dynamic_buttons").removeChild(button)
+    }
+
+    $("#hideButton").click(function() {
+        setTimeout(function() {hide();}, 2000);
+    });
+
+    $("#unhideButton").click(function() {
+        setTimeout(function() {unhide();}, 2000);
+    });
+
+    $("#createButton").click(function() {
+        setTimeout(function() {addDiv();}, 2000);
+    });
+
+    $("#removeButton").click(function() {
+        setTimeout(function() {removeDiv();}, 2000);
+    });
+});
+
+// Used for the DOM buttons.
+$(document).ready(function() {
+    $("#long").click(function(){
+        modifySubtree('container1', 5, 1000);
+    });
+
+    $("#quick").click(function(){
+        modifySubtree('container1', 20, 100);
+    });
+
+    $("#stale").click(function(){
+        modifySubtree('container2', 20, 100); staleDiv('container1', 'container2');
+    });
+
+    $("#fade").click(function(){
+        fadeIn('spanContainer', 0);
+    });
+
+    function modifySubtree(id, number, timeout) {
+        var timer = setInterval(function() {
+            var div = document.getElementById(id);
+            var span = document.createElement("span");
+            span.innerHTML = "Hail Hydra";
+            div.appendChild(span);
+            div.appendChild(document.createElement("br"));
+        }, timeout);
+
+        setTimeout(function() {
+            clearInterval(timer);
+        }, number * timeout);
+    }
+
+    function staleDiv(parent_id, child_id) {
+        var parent  = document.getElementById(parent_id);
+        var child   = document.getElementById(child_id);
+        var new_div = document.createElement("div");
+        new_div.id    = child_id;
+        new_div.style = 'display: block;';
+
+        setTimeout(function() {
+            parent.removeChild(child);
+            parent.appendChild(new_div);
+        }, 1000);
+    }
+
+    function fadeIn(id, value) {
+        var el = document.getElementById(id);
+        el.style.opacity = '0.' + value;
+        if (value < 9) {
+            value++;
+            setTimeout(function() { fadeIn(id, value) }, 400);
+        } else {
+            el.innerHTML = 'Faded';
+            return;
+        }
+    }
+});

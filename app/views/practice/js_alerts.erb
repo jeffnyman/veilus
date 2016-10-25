@@ -1,18 +1,23 @@
 <h1>JavaScript Alerts</h1>
 
-<p><a href="../practice">Back to Practice Page</a></p>
+<p><a class="site-button" href="../practice">Back to Practice Page</a></p>
+
+<hr />
 
 <p>JavaScript alerts are always interesting. The first set of buttons below have the logic inside the button element. The buttons can also change based on the action.</p>
 
+<div class="practice-block">
 <div id="javascript_buttons">
   <label class="site-label">JavaScript Buttons:</label>
   <input id="alertButton" type="button" value="Alert" onclick="alert('Alert!')" />
   <input id="confirmButton" type="button" onclick="this.value = confirm('Confirmation Message Received')" value="Confirm" />
   <input id="promptButton" type="button" onclick='this.value = prompt("Favorite Color", "blue")' value="Prompt" />
 </div>
+</div>
 
 <hr />
 
+<div class="practice-block">
 <p>The next buttons are relying on JavaScript on the page but not inlined in the element. The buttons here do not change, but rather the "Result" area is provided some text to display.</p>
 
 <ul style='list-style-type: none;'>
@@ -23,6 +28,7 @@
 
 <span style="color: #ffffff;">Result:</span>
 <p id='result' style='color: #ffff00;'></p>
+</div>
 
 <script>
   function jsAlert() {

@@ -131,6 +131,16 @@ module Project
       erb :'practice/js_alerts'
     end
 
+    get '/practice/dynamic_controls' do
+      title 'Practice - Dynamic Controls'
+      erb :'practice/dynamic_controls'
+    end
+
+    get '/practice/dynamic_events' do
+      title 'Practice - Dynamic Events'
+      erb :'practice/dynamic_events'
+    end
+
     # Finish: Practice
 
     # Start: Overlord

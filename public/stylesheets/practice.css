@@ -40,6 +40,22 @@ form#signup #submit {
     color: #ffffff;
 }
 
+#spanContainer {
+    color: #ffff00;
+}
+
+#container1 span {
+    color: #ffff00;
+}
+
+#container2 span {
+    color: #ffff00;
+}
+
+#loading, #finish, #finish-render {
+    color: #ffff00;
+}
+
 #practice form .indent {
     margin-left: 30px;
 }
