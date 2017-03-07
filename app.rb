@@ -42,11 +42,11 @@ module Project
       set :session_secret, "spatially foliated hypersurface with temporal coordinates"
     end
 
-    before do
-      last_modified settings.start_time
-      etag settings.start_time.to_s
-      cache_control :public, :must_revalidate
-    end
+    #before do
+    #  last_modified settings.start_time
+    #  etag settings.start_time.to_s
+    #  cache_control :public, :must_revalidate
+    #end
 
     configure :development do
       DataMapper::Logger.new($stdout, :debug)
