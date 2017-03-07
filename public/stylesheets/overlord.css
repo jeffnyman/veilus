@@ -1,56 +1,70 @@
-#provision-error {
-    font-size: 15px;
-    font-weight: bold;
-    background: #990000;
-    color: white;
-    border: 1px solid #ccc;
+.timer-display fieldset {
+	border: 0;
 }
 
-#provision-bomb {
-    margin-top: 15px;
-}
-
-.panel-body {
-    font-size: 18px;
-}
-
-.bomb-panel {
-    margin-top: 5%;
+#trigger-code-display fieldset {
+  border: 0;
 }
 
 .panel-title {
-    font-size: 24px;
+  font-size: 24px;
 }
 
-.component {
-    color: #333 !important;
-    border-radius: 25px;
-    border-color: #b7b7b7 #b7b7b7 hsl(360, 0%, 65.5%);
-    background-color: hsl(360, 0%, 72%) !important;
+.panel-body {
+  font-size: 18px;
 }
 
-#trigger {
-    padding: 20px 10px;
-}
-
-#overlord table {
-    padding: 10px;
-    margin: 0 auto;
-}
-
-#overlord td {
-    width: 33%;
-}
-
-#timer {
-    margin: 20px 0;
-    padding: 30px 0;
-}
-
-.timer-display {
-    margin: 0 5px;
+.bomb-panel {
+  margin-top: 5%;
 }
 
 #provision_bomb label, span {
-    color: #000000;
+  color: #000000;
+}
+
+#provision-bomb {
+  margin-top: 15px;
+}
+
+#provision-error {
+  font-size: 15px;
+  font-weight: bold;
+  background: #990000;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+#site-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.component {
+  color: #333 !important;
+  border-radius: 25px;
+  border-color: #b7b7b7 #b7b7b7 hsl(360, 0%, 65.5%);
+  background-color: hsl(360, 0%, 72%) !important;
+}
+
+#overlord table {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#overlord td {
+  width: 33%;
+}
+
+#trigger {
+  padding: 20px 10px;
+}
+
+#timer {
+  margin: 20px 0;
+  padding: 30px 0;
+}
+
+.timer-display {
+  margin: 0 5px;
 }
