@@ -144,9 +144,8 @@ module Project
     # Finish: Practice
 
     # Start: Overlord
-
     get '/overlord/?' do
-      #protected!
+      protected!
       title 'Project Overlord'
       erb :overlord
     end
