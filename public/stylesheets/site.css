@@ -159,7 +159,7 @@ div.practice-block {
     border: 1px solid #ccc;
 }
 
-.error, .invalid_code {
+.error, .invalid_code, .invalid_activation, .invalid_deactivation {
     width: 600px;
     padding: 5px;
     font-weight: bold;
