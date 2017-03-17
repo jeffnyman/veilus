@@ -84,8 +84,8 @@ $(document).ready(function() {
     rules: {
       activation_code: {
         digits: true,
-        minLength: 4,
-        maxLength: 4
+        minlength: 4,
+        maxlength: 4
       },
       deactivation_code: {
         digits: true,
