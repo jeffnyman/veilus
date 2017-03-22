@@ -63,8 +63,13 @@ module Project
     end
 
     post '/' do
-      if params[:username] == settings.username && params[:password] == settings.password
+      if (params[:username] == settings.username && params[:password] == settings.password)
         session[:admin] = true
+        flash[:notice] = "You are now logged in as #{params[:username]}."
+        session[:current_user] = params[:username]
+        redirect to('/home')
+      elsif (params[:username] == "tester" && params[:password] == "testing")
+        session[:tester] = true
         flash[:notice] = "You are now logged in as #{params[:username]}."
         session[:current_user] = params[:username]
         redirect to('/home')
@@ -79,7 +84,7 @@ module Project
     end
 
     get '/home/?' do
-      #protected!
+      protected!
       title 'Home'
       erb :home
     end
@@ -91,25 +96,25 @@ module Project
     end
 
     get '/stardate/?' do
-      #protected!
+      protected!
       title 'Stardate Calculator'
       erb :stardate
     end
 
     get '/planets/?' do
-      #protected!
+      protected!
       title 'Planet Weight Calculator'
       erb :planets
     end
 
     get '/warp/?' do
-      #protected!
+      protected!
       title 'Warp Factor Calculator'
       erb :warp
     end
 
     get '/warcraft/?' do
-      #protected!
+      protected!
       title 'World of Warcraft'
       erb :warcraft
     end
@@ -145,7 +150,7 @@ module Project
 
     # Start: Overlord
     get '/overlord/?' do
-      #protected!
+      admin_protected!
       title 'Project Overlord'
       erb :overlord
     end
@@ -194,7 +199,7 @@ module Project
     # Start: Comics
 
     get '/comics/?' do
-      protected!
+      admin_protected!
       title 'Comic Library'
       get_comics
       erb :comics
