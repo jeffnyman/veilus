@@ -10,7 +10,6 @@ require_relative 'app/helpers/overlord_helpers'
 require_relative 'app/models/trigger'
 require_relative 'app/models/timer'
 require_relative 'app/models/bomb'
-require_relative 'app/models/comic'
 
 module Project
   class Veilus < Sinatra::Base
@@ -32,7 +31,7 @@ module Project
       set :username, "admin"
       set :password, "admin"
       set :start_time, Time.now
-      set :session_secret, "spatially foliated hypersurface with temporal coordinates"
+      set :session_secret, "spatially foliated hypersurfaces with acausal temporal coordinates"
     end
 
     #before do

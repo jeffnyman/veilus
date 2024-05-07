@@ -5,4 +5,6 @@ gem 'sinatra'
 gem 'sinatra-flash'
 gem 'sinatra-reloader'
 
-gem 'activesupport'
+gem 'activesupport', '~> 7.0.8'
+
+gem "rackup", "~> 2.1"
