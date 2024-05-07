@@ -1,89 +1,82 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.7.5)
+    activesupport (7.1.3.2)
+      base64
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
+      mutex_m
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
-    concurrent-ruby (1.2.2)
-    data_objects (0.10.17)
-      addressable (~> 2.1)
+    addressable (2.8.6)
+      public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.8)
+    concurrent-ruby (1.2.3)
+    connection_pool (2.4.1)
     dm-core (1.2.1)
       addressable (~> 2.3)
-    dm-do-adapter (1.2.0)
-      data_objects (~> 0.10.6)
-      dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
-    dm-postgres-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_postgres (~> 0.10.6)
-    dm-sqlite-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_sqlite3 (~> 0.10.6)
     dm-timestamps (1.2.0)
       dm-core (~> 1.2.0)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    do_postgres (0.10.17)
-      data_objects (= 0.10.17)
-    do_sqlite3 (0.10.17)
-      data_objects (= 0.10.17)
-    i18n (1.14.1)
+    drb (2.2.1)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
-    minitest (5.19.0)
+    minitest (5.22.3)
     multi_json (1.15.0)
-    mustermann (2.0.2)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.7.0)
-    pg (0.19.0)
-    public_suffix (4.0.6)
-    puma (5.6.8)
+    mutex_m (0.2.0)
+    nio4r (2.7.2)
+    public_suffix (5.0.5)
+    puma (6.4.2)
       nio4r (~> 2.0)
-    rack (2.2.8.1)
-    rack-protection (2.2.3)
-      rack
+    rack (3.0.10)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
     ruby2_keywords (0.0.5)
-    sinatra (2.2.3)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.3)
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-contrib (2.2.3)
-      multi_json
-      mustermann (~> 2.0)
-      rack-protection (= 2.2.3)
-      sinatra (= 2.2.3)
+    sinatra-contrib (4.0.0)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.0.0)
+      sinatra (= 4.0.0)
       tilt (~> 2.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
     sinatra-reloader (1.0)
       sinatra-contrib
-    tilt (2.0.11)
+    tilt (2.3.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    zeitwerk (2.6.11)
 
 PLATFORMS
-  ruby
+  x64-mingw-ucrt
 
 DEPENDENCIES
   activesupport
   dm-core
   dm-migrations
-  dm-postgres-adapter
-  dm-sqlite-adapter
   dm-timestamps
   dm-validations
-  pg
   puma
   sinatra
   sinatra-flash
   sinatra-reloader
 
 BUNDLED WITH
-   1.14.5
+   2.4.19

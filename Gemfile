@@ -10,9 +10,9 @@ gem 'dm-migrations'
 gem 'dm-timestamps'
 gem 'dm-validations'
 
-gem 'dm-sqlite-adapter', group: :development
+# gem 'dm-sqlite-adapter', group: :development
 
-gem 'pg', group: :production
-gem 'dm-postgres-adapter', group: :production
+# gem 'pg', group: :production
+# gem 'dm-postgres-adapter', group: :production
 
 gem 'activesupport'
