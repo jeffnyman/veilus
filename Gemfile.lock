@@ -11,20 +11,10 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
     base64 (0.2.0)
     bigdecimal (3.1.8)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
-    dm-core (1.2.1)
-      addressable (~> 2.3)
-    dm-migrations (1.2.0)
-      dm-core (~> 1.2.0)
-    dm-timestamps (1.2.0)
-      dm-core (~> 1.2.0)
-    dm-validations (1.2.0)
-      dm-core (~> 1.2.0)
     drb (2.2.1)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
@@ -34,7 +24,6 @@ GEM
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.2.0)
     nio4r (2.7.2)
-    public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
     rack (3.0.10)
@@ -70,10 +59,6 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  dm-core
-  dm-migrations
-  dm-timestamps
-  dm-validations
   puma
   sinatra
   sinatra-flash
