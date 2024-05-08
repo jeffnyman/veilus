@@ -26,7 +26,7 @@ module Project
       enable :method_override
 
       set :server, :puma
-      set :name, "Veilus"
+      set :name, "Spec Workshop"
       set :views, "app/views"
       set :username, "admin"
       set :password, "admin"
