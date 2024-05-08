@@ -1,92 +1,99 @@
 /* Start: Sign Up Form */
 
 strong#group {
-    color: rgb(227,198,133);
+  color: rgb(227, 198, 133);
 }
 
-#signup input[type="text"], input[type="date"], input[type="password"] {
-    border: 1px solid #999;
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    display: block;
-    margin-bottom: 1em;
+#signup input[type="text"],
+input[type="date"],
+input[type="password"] {
+  border: 1px solid #999;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin-bottom: 1em;
 }
 
-form#signup input[type="submit"], input[type="radio"], input[type="checkbox"] {
-    display: inline-block;
-    margin-top: 10px;
+form#signup input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 form#signup select {
-    display: inline-block;
-    margin-top: 8px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
 #signup textarea#conspiracy {
-    width: 620px;
-    height: 300px;
+  width: 620px;
+  height: 300px;
 }
 
 #signup input#secretTrackingNumber {
-    width: 100px;
+  width: 100px;
 }
 
 form#signup #submit {
-    float: right;
+  float: right;
 }
 
 #practice span {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #spanContainer {
-    color: #ffff00;
+  color: #ffff00;
 }
 
 #container1 span {
-    color: #ffff00;
+  color: #ffff00;
 }
 
 #container2 span {
-    color: #ffff00;
+  color: #ffff00;
 }
 
-#loading, #finish, #finish-render {
-    color: #ffff00;
+#loading,
+#finish,
+#finish-render {
+  color: #ffff00;
 }
 
 #practice form .indent {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .labelBlock {
-    color: rgb(227,198,133);
-    text-transform: uppercase;
-    font-weight: bold;
-    display: block;
-    padding-bottom: 0 !important;
-    clear: both;
-    margin-top: 10px;
+  color: rgb(227, 198, 133);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 0 !important;
+  clear: both;
+  margin-top: 10px;
 }
 
 #signup label.val-error {
-    margin-top: 2px;
-    font-size: 0.8em;
-    color: rgb(395,151,51);
-    font-weight: bold;
-    display: block;
-//margin-left: 215px;
-    margin-left: 0;
+  margin-top: 2px;
+  font-size: 0.8em;
+  color: rgb(395, 151, 51);
+  font-weight: bold;
+  display: block;
+  /* margin-left: 215px; */
+  margin-left: 0;
 }
 
-#signup input.val-error, #signup select.val-error {
-    background: #ffa9b8;
-    border: 1px solid red;
+#signup input.val-error,
+#signup select.val-error {
+  background: #ffa9b8;
+  border: 1px solid red;
 }
 
 #signup .indent label.val-error {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 /* Finish: Sign Up Form */
@@ -94,40 +101,40 @@ form#signup #submit {
 /* Start: Drag and Drop */
 
 #draggable {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    padding: 0.5em;
-    float: left;
-    margin: 10px 10px 10px 0;
-    background-color: red;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px 10px 10px 0;
+  background-color: red;
 }
 
 #droppable {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    padding: 0.5em;
-    float: left;
-    margin: 10px;
-    background-color: blue;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  background-color: blue;
 }
 
 .columns {
-    width: 400px;
+  width: 400px;
 }
 .column {
-    height: 150px;
-    width: 150px;
-    float: left;
-    border: 2px solid #666666;
-    background-color: #ccc;
-    margin-right: 5px;
-    text-align: center;
-    cursor: move;
+  height: 150px;
+  width: 150px;
+  float: left;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  text-align: center;
+  cursor: move;
 }
 .column.over {
-    border: 2px dashed #000;
+  border: 2px dashed #000;
 }
 
 /* Finish: Drag and Drop */

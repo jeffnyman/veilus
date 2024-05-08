@@ -1,5 +1,5 @@
 .timer-display fieldset {
-	border: 0;
+  border: 0;
 }
 
 #trigger-code-display fieldset {
@@ -18,7 +18,8 @@
   margin-top: 5%;
 }
 
-#provision_bomb label, span {
+#provision_bomb label,
+span {
   color: #000000;
 }
 

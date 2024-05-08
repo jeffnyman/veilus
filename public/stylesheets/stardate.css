@@ -1,44 +1,44 @@
 #stardateValue {
-    width: 100px;
+  width: 100px;
 }
 
 #calendarValue {
-    width: 450px;
+  width: 450px;
 }
 
 #stardate-instruct {
-    color: rgb(227,198,133);
+  color: rgb(227, 198, 133);
 }
 
 #convert {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .stardateFormat {
-    background-color: #000000;
-    color: yellow;
+  background-color: #000000;
+  color: yellow;
 }
 
 #computeStardate label.val-error {
-    width: 600px;
-    padding: 5px;
-    font-weight: bold;
-    margin: 20px;
-    background: #990000;
-    color: white;
-    border: 1px solid #ccc;
-    /*display: block;*/
+  width: 600px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 20px;
+  background: #990000;
+  color: white;
+  border: 1px solid #ccc;
+  /*display: block;*/
 }
 
 #stardateList select#stardates {
-    width: 420px;
-    height: 230px;
+  width: 420px;
+  height: 230px;
 }
 
 #stardate-list-table td {
-    padding: 20pt 2pt;
+  padding: 20pt 2pt;
 }
 
 #stardate-list-table .button-size {
-    width: 150px;
+  width: 150px;
 }
